@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf App</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style/styles.css">
+  </head>
+  <body>
+    <header>
+      <h1>Bookshelf App</h1>
+    </header>
+    <main>
+     
+      <section class="addbook_section">
+        <h2 class="title">Add Book</h2>
+        <form id="addbook">
+          <div class="field-input">
+            <label for="inputtitlebook">Title</label>
+            <input class="form-input" id="inputtitlebook" type="text" placeholder="Title" required>
+          </div>
+          <div class="row">
+            <div class="field-input">
+              <label for="inputauthorbook">Author</label>
+              <input class="form-input" id="inputauthorbook" type="text" placeholder="Author" required>
+            </div>
+            <div class="field-input">
+              <label for="inputyearbook">Year</label>
+              <input class="form-input" id="inputyearbook" type="number" placeholder="Year" required>
+            </div>
+          </div>
+            <div class="input_inline">
+              <input id="inputbookstatus" type="checkbox" />
+              <label for="inputbookstatus">Finished Reading</label>
+            </div>
+          <button style="margin: auto; font-weight: 600;" class="button-blue" id="submitbook" type="submit">Save</button>
+          <button style="margin: auto; font-weight: 600;" class="button-orange" id="editbook" type="submit">Edit</button>
+        </form>
+      </section>
+    
+      <section class="search_section">
+          <form id="searchbook">
+            <input id="searchbooktitle" type="text" placeholder="Search Book Title" onkeyup="searchbooklist()">
+          </form>
+      </section>
+     
+      <section class="unreadbook_section">
+        <h2 class="title">Unread Book</h2>
+        <div class="book-shelf">
+        <div id="unreadbooklist" class="book_list"></div>
+      </div>
+      </section>
+    
+      <section class="finishedbook_section">
+        <h2 class="title">Finished Book</h2>
+        <div class="book-shelf">
+          <div id="finishedbooklist" class="book_list"></div>
+        </div>
+      </section>
+    </main>
+    <footer>
+        copyright &copy; 2023 - Muhammad Alfian Novanto
+    </footer>
+    <script src="js/script.js"></script>
+
+  </body>
+</html>
